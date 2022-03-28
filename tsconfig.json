@@ -4,6 +4,13 @@
         "module": "ESNext", // 使用模块系统的标准
         "lib": ["es6", "DOM"], // 让编译上下文包含这些包的 声明内容，可以使用这里包中的 api
         "noLib": false, // 启用 ts 自带的 lib.d.ts 文件的声明内容
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "moduleResolution": "node", // 按node 方式解析模块引入
+        // "declaration": true,   // 生成ts 代码中的声明文件
+        "baseUrl": "./", // 整个项目当前目录， 利于寻找 全局声明文件 xxx.d.ts
+        "paths": {
+            "*": ["types/*"]
+        },
+        "experimentalDecorators": true // 启用装饰器
     }
 }

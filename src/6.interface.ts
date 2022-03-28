@@ -64,3 +64,12 @@ interface Clazz<T> {
 }
 
 let speak: Clazz<Speak> = Speak;
+
+// 接口的 只读属性
+interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+
+let p1: Point = { x: 1, y: 3 };
+p.x = 2; // error

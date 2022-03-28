@@ -11,3 +11,6 @@ export {};
 function getLen<T extends number>(val: T) {
     return val;
 }
+
+// 使用时传递 真正的类型
+console.log(getLen<number>(2));
